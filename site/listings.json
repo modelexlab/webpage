@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/gpt/index.html",
       "/posts/translation/index.html",
       "/posts/text-to-image/index.html"
     ]

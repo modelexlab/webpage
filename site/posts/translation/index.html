@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.3.433">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -179,11 +179,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p><img src="images/MODELEX-2.png" class="img-fluid"></p>
-<section id="opus-french-to-english" class="level1">
-<h1>Opus French to English</h1>
-<section id="model-transformer-align" class="level3">
-<h3 class="anchored" data-anchor-id="model-transformer-align">model: transformer-align</h3>
+<section id="modelex-french-to-english-transformer-v0.1" class="level1">
+<h1><strong>MODELEX French to English transformer-v0.1</strong></h1>
 <p><strong>API request</strong></p>
 <p><strong>Token</strong>: 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</p>
 <div class="cell" data-execution_count="1">
@@ -196,40 +193,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    response <span class="op">=</span> requests.post(API_URL, headers<span class="op">=</span>headers, json<span class="op">=</span>payload)</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> response.json()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Translation of the following prompt:</p>
-<pre><code>ROBERT T. KIYOSAKI a remis en question et changé la perception de l'argent de dizaines de millions de gens partout dans le monde. Avec des opinions qui vont souvent à l'encontre de la sagesse populaire, Robert est maintenant connu pour son franc-parler, son insolence et son audace. Il est considéré à l'échelle mondiale comme un défenseur passionné de l'éducation financière. --Ce texte fait référence à une édition épuisée ou non disponible de ce titre.</code></pre>
+</section>
+<section id="translation-of-the-following-prompt" class="level1">
+<h1>Translation of the following prompt:</h1>
+<p><strong>Prompt</strong>: ROBERT T. KIYOSAKI a remis en question et changé la perception de l’argent de dizaines de millions de gens partout dans le monde. Avec des opinions qui vont souvent à l’encontre de la sagesse populaire, Robert est maintenant connu pour son franc-parler, son insolence et son audace. Il est considéré à l’échelle mondiale comme un défenseur passionné de l’éducation financière. –Ce texte fait référence à une édition épuisée ou non disponible de ce titre.</p>
 <div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>output <span class="op">=</span> query({</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"inputs"</span>: <span class="st">"ROBERT T. KIYOSAKI a remis en question et changé la perception de l'argent de dizaines de millions de gens partout dans le monde. Avec des opinions qui vont souvent à l'encontre de la sagesse populaire, Robert est maintenant connu pour son franc-parler, son insolence et son audace. Il est considéré à l'échelle mondiale comme un défenseur passionné de l'éducation financière. --Ce texte fait référence à une édition épuisée ou non disponible de ce titre."</span>,</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>output</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>output <span class="op">=</span> query({</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"inputs"</span>: <span class="st">"ROBERT T. KIYOSAKI a remis en question et changé la perception de l'argent de dizaines de millions de gens partout dans le monde. Avec des opinions qui vont souvent à l'encontre de la sagesse populaire, Robert est maintenant connu pour son franc-parler, son insolence et son audace. Il est considéré à l'échelle mondiale comme un défenseur passionné de l'éducation financière. --Ce texte fait référence à une édition épuisée ou non disponible de ce titre."</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>output</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>[{'translation_text': 'ROBERT T. KIYOSAKI has questioned and changed the perception of the money of tens of millions of people around the world. With opinions that often run counter to popular wisdom, Robert is now known for his frankness, insolence and audacity. He is considered globally a passionate defender of financial education. --This text refers to an exhausted or unavailable edition of this title.'}]</code></pre>
 </div>
 </div>
-<pre><code>Ensemble de conceptions portant sur les principes des êtres et des choses, sur le rôle de l'homme dans l'univers, sur Dieu, sur l'histoire et, de façon générale, sur tous les grands problèmes de la métaphysique.</code></pre>
+<p><strong>Prompt</strong>: Ensemble de conceptions portant sur les principes des êtres et des choses, sur le rôle de l’homme dans l’univers, sur Dieu, sur l’histoire et, de façon générale, sur tous les grands problèmes de la métaphysique.</p>
 <div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>output <span class="op">=</span> query({</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"inputs"</span>: <span class="st">"Ensemble de conceptions portant sur les principes des êtres et des choses, sur le rôle de l'homme dans l'univers, sur Dieu, sur l'histoire et, de façon générale, sur tous les grands problèmes de la métaphysique."</span>,</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>output</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>output <span class="op">=</span> query({</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"inputs"</span>: <span class="st">"Ensemble de conceptions portant sur les principes des êtres et des choses, sur le rôle de l'homme dans l'univers, sur Dieu, sur l'histoire et, de façon générale, sur tous les grands problèmes de la métaphysique."</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>output</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>[{'translation_text': 'Set of conceptions on the principles of beings and things, on the role of man in the universe, on God, on history and, in general, on all the great problems of metaphysics.'}]</code></pre>
 </div>
 </div>
-<pre><code>Les fanatiques de Disney devront se serrer un petit peu plus la ceinture s’ils veulent visiter les deux parcs à thèmes situés aux États-Unis, puisque l’entreprise a annoncé mercredi avoir augmenté les prix pour ses installations de Californie et de Floride.</code></pre>
+<p><strong>Prompt:</strong> Les fanatiques de Disney devront se serrer un petit peu plus la ceinture s’ils veulent visiter les deux parcs à thèmes situés aux États-Unis, puisque l’entreprise a annoncé mercredi avoir augmenté les prix pour ses installations de Californie et de Floride.</p>
 <div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>output <span class="op">=</span> query({</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"inputs"</span>: <span class="st">"Les fanatiques de Disney devront se serrer un petit peu plus la ceinture s’ils veulent visiter les deux parcs à thèmes situés aux États-Unis, puisque l’entreprise a annoncé mercredi avoir augmenté les prix pour ses installations de Californie et de Floride."</span>,</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>output</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>output <span class="op">=</span> query({</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"inputs"</span>: <span class="st">"Les fanatiques de Disney devront se serrer un petit peu plus la ceinture s’ils veulent visiter les deux parcs à thèmes situés aux États-Unis, puisque l’entreprise a annoncé mercredi avoir augmenté les prix pour ses installations de Californie et de Floride."</span>,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>output</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>[{'translation_text': "Disney's fanatics will have to tighten their belt a little bit more if they want to visit the two theme parks located in the United States, since the company announced on Wednesday that it had increased prices for its California and Florida facilities."}]</code></pre>
 </div>
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
